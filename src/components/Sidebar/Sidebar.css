@@ -26,6 +26,7 @@ button:focus {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: #00a97f;
 }
 
 .sidebar--header > h3 {
@@ -34,7 +35,7 @@ button:focus {
 
 .new-note {
   cursor: pointer;
-  background-color: #4a4e74;
+  background-color: #00a97f;
   border: none;
   color: white;
   border-radius: 3px;
@@ -52,7 +53,7 @@ button:focus {
 }
 
 .selected-note {
-  background-color: #4a4e74;
+  background-color: #00a97f;
 }
 
 .text-snippet {

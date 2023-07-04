@@ -8,13 +8,69 @@ body {
   font-family: "Karla", sans-serif;
 }
 
-.first-note {
+/* .first-note {
   cursor: pointer;
   background-color: #4a4e74;
   border: none;
   color: white;
   border-radius: 3px;
   padding: 1rem;
+} */
+
+.first-note {
+  --color: #00a97f;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+
+.first-note::before,
+.first-note::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+
+.first-note::before {
+  top: -1em;
+  left: -1em;
+}
+
+.first-note::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.first-note:hover::before,
+.first-note:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.first-note:hover {
+  color: rgb(10, 25, 30);
+}
+
+.first-note:active {
+  filter: brightness(0.8);
 }
 
 .split {
@@ -22,6 +78,7 @@ body {
 }
 
 .no-notes {
+  color: #00a97f;
   width: 100%;
   height: 100vh;
   display: flex;
